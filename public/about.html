@@ -1,0 +1,48 @@
+
+<div data-page="about" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Browse</div>
+    </div>
+  </div>
+  <div data-distance="20" class="page-content infinite-scroll">
+    <div class="content-block-title">Latest Movies</div>
+    <div class="list-block media-list">
+      <ul id="content-wrap"></ul>
+      <div id="show-hide-btn" class="content-block">
+          <div>
+             <p class="buttons-row">
+              <a onclick="loadMoreMovies()" class="button button-big button-fill button-raised color-red external">More</a>
+          </p>
+          </div>
+      </div>
+
+
+
+
+        <script type="text/template7" id="moviesListTemplate">
+          {{#each movies}}
+          <li>
+            <a href="movie.html?id={{id}}" class="item-link">
+             <div class="item-content">
+               <div class="item-media"><img class="lazy lazy-fadein" src="{{medium_cover_image}}" width="70"></div>
+               <div class="item-inner">
+                 <div class="item-title-row">
+                   <div class="item-title"><b>{{title}}</b></div>
+                 </div>
+                 <div class="item-subtitle rating">{{rating}}</div>
+                 <div class="item-text">{{summary}}</div>
+
+               </div>
+             </div>
+             </a>
+           </li>
+          {{/each}}
+
+
+
+        </script>
+    </div>
+  </div>
+</div>

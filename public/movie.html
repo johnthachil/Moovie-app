@@ -1,0 +1,53 @@
+<div id="movie-wrap" data-page="movie" class="page">
+
+            <script type="text/template7" id="movie-detail">
+              {{#movie}}
+
+              <div class="navbar ">
+                  <div class="navbar-inner">
+                      <div class="left"><a href="index.html" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+                      <div class="center">{{title}}</div>
+                  </div>
+              </div>
+              <div class="page-content">
+                <div class="movie-header-overlay">
+                  <div class='embed-container'>
+                    <iframe src='http://www.youtube.com/embed/{{yt_trailer_code}}?rel=0&amp;showinfo=0' frameborder='0' allowfullscreen></iframe>
+                  </div>
+
+                </div>
+                <div class="content-block movie-header">
+                    <div class="row">
+                      <div class="col-33 ">
+                        <img class="lazy lazy-fadein" src="{{medium_cover_image}}" style="width:100%;">
+                      </div>
+                      <div class="col-66 movie-header-title">
+                        <div class="movie-name">{{title}}</div>
+                        <div class="movie-genres">{{join genres delimiter=,}}</div>
+                        <div class="movie-rating">{{rating}}</div>
+                        <div class="movie-year">Year: {{year}}</div>
+
+
+                      </div>
+                    </div>
+                  </div>
+
+                    <div class="row">
+                      <div class="content-block-title summary-title">Summary</div>
+                      <div class="content-block">{{description_full}}</div>
+                    </div>
+                    <div class="content-block">
+                        <div>
+                           <p class="buttons-row">
+                            {{#each torrents}}
+                            <a href="{{url}}" class="button button-big button-fill button-raised color-red external">{{quality}}</a>
+                          {{/each}}
+                        </p>
+
+                        </div>
+                    </div>
+                {{/movie}}
+              </div>
+
+            </script>
+</div>
